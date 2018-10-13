@@ -56,6 +56,7 @@ describe('', function() {
       clearDB(db, tablenames, function() {
         server = app.listen(port, done);
       });
+      //console.log("=============DROP TABLE==============");
     });
 
     afterEach(function() { server.close(); });
@@ -123,7 +124,7 @@ describe('', function() {
     });
   });
 
-  xdescribe('Account Creation:', function() {
+  describe('Account Creation:', function() {
 
     it('signup creates a new user record', function(done) {
       var options = {
@@ -146,7 +147,7 @@ describe('', function() {
         });
       });
     });
-
+    
     it('does not store the user\'s original text password', function(done) {
       var options = {
         'method': 'POST',
@@ -208,7 +209,7 @@ describe('', function() {
     });
   });
 
-  xdescribe('Account Login:', function() {
+  describe('Account Login:', function() {
 
     beforeEach(function(done) {
       var options = {
