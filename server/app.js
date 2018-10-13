@@ -89,7 +89,6 @@ app.post('/login', (req, res, next)=>{
   models.Users.get(options)
   //Then, check it 
   .then( user =>{
-    console.log('user: ', user);
     if(user === undefined) {
       res.redirect('/login');
       return;
