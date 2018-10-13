@@ -4,7 +4,7 @@ const parseCookies = (req, res, next) => {
     next();
     return;
   }
-  console.log('cookie: ', req.headers);
+  //console.log('cookie: ', req.headers);
   // console.log('res: ', res);
   //req.cookies = req.headers;
   //var cookie = req.cookie
